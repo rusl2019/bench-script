@@ -14,7 +14,7 @@ if ! [ -x "$(command -v stress)" ];then
     exit 1
 fi
 
-clear # clearing terminal window
+clear
 
 # color
 red='\e[0;31m'
@@ -23,14 +23,13 @@ yellow='\e[1;33m'
 cyan='\e[0;36m'
 purple='\e[0;35m'
 
-# just saying hello
 echo -e $cyan "Thank you so much for using benchmark scrip!!!"
 echo " "
 
 # thread count
 TC=$(( $(lscpu | awk '/^Socket/{ print $2 }') * $(lscpu | awk '/^Core/{ print $4 }') * $(lscpu | awk '/^Thread/{ print $4 }') ))
 
-# temperature
+# cpu temperature
 DO_TEMP(){
     unset TEMP
     # typical RPI setting
