@@ -122,7 +122,6 @@ DO_MEM(){
     echo -e $cyan "Size of memory block for test : $red$b_size"
     echo -e $cyan "Total size of data to transfer : $red$t_size"
     echo -e $cyan "Memory access scope : $red$scope"
-    echo -e $cyan "Type of memory operations : $red$oper"
     echo -e $cyan "Limit for total execution time : $red$time$cyan second"
     echo " "
 
